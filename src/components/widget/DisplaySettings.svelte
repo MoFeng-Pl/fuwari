@@ -35,7 +35,8 @@ onMount(() => {
 
 	syncFromCss();
 	window.addEventListener("fuwari:wallpaper-hue", onWallpaperHue);
-	return () => window.removeEventListener("fuwari:wallpaper-hue", onWallpaperHue);
+	return () =>
+		window.removeEventListener("fuwari:wallpaper-hue", onWallpaperHue);
 });
 
 $: if (hue || hue === 0) {
