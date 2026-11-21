@@ -29,6 +29,15 @@ export type SiteConfig = {
 			text: string;
 			url?: string;
 		};
+		/**
+		 * 随机壁纸：每次刷新从 src/assets/wallpapers/ 中随机挑一张，
+		 * 并提取图片主色调来设置主题色（--hue）。
+		 */
+		random?: {
+			enable: boolean;
+			/** 是否让主题色跟随壁纸主色调 */
+			followHue?: boolean;
+		};
 	};
 	toc: {
 		enable: boolean;

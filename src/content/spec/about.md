@@ -1,9 +1,42 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 关于
 
-::github{repo="saicaca/fuwari"}
+我是 MoFeng，这里是我的 C++ 学习笔记库 —— 用来把系统学过的内容真正沉淀下来。
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+## 这个站点是什么
+
+`MoFeng's Note Space` 记录我完整走一遍 C++ 入门的过程。课程共计 100 课，按**两课一篇**整理成 46 篇笔记，覆盖从第一个程序到函数、算法思想、进制与位运算的整条路径。
+
+每篇笔记都按同一套体例写，方便回查：
+
+- **核心概念** —— 这个知识点到底在解决什么问题
+- **语法格式** —— 怎么写，有哪些细节和限制
+- **代码示例** —— 可以直接编译运行，配上控制台输出
+- **本节小结** —— 一句话记住要点
+- **知识框架梳理** —— 全篇速查表与易错点清单
+
+## 内容分布
+
+| 章 | 课次 | 主题 |
+| -- | ---- | ---- |
+| 1 | 1–12 | 基本数据类型 |
+| 2 | 13–18 | IO 与运算符应用 |
+| 3 | 19–26 | 分支结构 |
+| 4 | 27–36 | 循环基础 |
+| 5 | 37–50 | 循环进阶 |
+| 6 | 51–60 | 一维数组 |
+| 7 | 61–68 | 循环嵌套与二维数组 |
+| 8 | 69–78 | 字符数组与字符串 |
+| 9 | 79–92 | 函数与算法思想 |
+| 10 | 93–100 | 进制与位运算 |
+
+## 联系我
+
+- GitHub：[MoFeng-Pl](https://github.com/MoFeng-Pl)
+
+:::note
+笔记难免有疏漏。如果发现错误，欢迎到 GitHub 找我，或者在评论区指正。
+:::
+
+## 致谢
+
+站点使用 [Fuwari](https://github.com/saicaca/fuwari) 主题构建，感谢作者的开源与维护。

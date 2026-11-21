@@ -12,6 +12,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
 
 # environment variables
 .env
@@ -29,3 +30,13 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# 笔记素材：课件截图约 234MB，不入库；只保留 Markdown 正文
+笔记/**/*.png
+笔记/**/*.jpg
+笔记/**/*.jpeg
+笔记/**/*.PNG
+笔记/**/*.JPG
+笔记/**/*.JPEG
+笔记/**/.trae/
+笔记/_acl-recovery/

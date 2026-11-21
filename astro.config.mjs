@@ -26,7 +26,7 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fuwari.vercel.app/",
+	site: "https://notes.mofeng.dpdns.org/",
 	base: "/",
 	trailingSlash: "always",
 	integrations: [
@@ -154,6 +154,13 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		server: {
+			watch: {
+				// 笔记目录只存放原始素材（Markdown + 截图），不参与站点构建。
+				// 排除监听可以避免编辑器写入临时文件时触发 EBUSY 报错。
+				ignored: ["**/笔记/**", "**/*.tmpdir/**"],
+			},
+		},
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {

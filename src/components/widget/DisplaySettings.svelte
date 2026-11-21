@@ -3,6 +3,7 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import Icon from "@iconify/svelte";
 import { getDefaultHue, getHue, setHue } from "@utils/setting-utils";
+import { onMount } from "svelte";
 
 let hue = getHue();
 const defaultHue = getDefaultHue();
@@ -10,6 +11,32 @@ const defaultHue = getDefaultHue();
 function resetHue() {
 	hue = getDefaultHue();
 }
+
+/**
+ * 随机壁纸会根据图片主色调改写 --hue，
+ * 这里把滑块同步过去，否则显示的还是配置里的旧值。
+ */
+onMount(() => {
+	const syncFromCss = () => {
+		const raw = getComputedStyle(document.documentElement)
+			.getPropertyValue("--hue")
+			.trim();
+		const value = Number.parseInt(raw, 10);
+		if (!Number.isNaN(value) && value !== hue) {
+			hue = value;
+		}
+	};
+	const onWallpaperHue = (event: Event) => {
+		const value = (event as CustomEvent<number>).detail;
+		if (typeof value === "number" && value !== hue) {
+			hue = value;
+		}
+	};
+
+	syncFromCss();
+	window.addEventListener("fuwari:wallpaper-hue", onWallpaperHue);
+	return () => window.removeEventListener("fuwari:wallpaper-hue", onWallpaperHue);
+});
 
 $: if (hue || hue === 0) {
 	setHue(hue);
